@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنواع المناسف</title>
+    <!-- يرتبط بملف CSS الذي يحتوي على تعريفات خط El Messiri من Google Fonts
+    ، ويشمل الأوزان من 400 إلى 700.
+    يستخدم لتطبيق هذا الخط على النصوص في الصفحة. -->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- يرتبط بملف CSS لمكتبة Boxicons، وهي مجموعة من أيقونات الخطوط 
+    التي يمكن استخدامها في الصفحة. يتم استضافتها على CDN الخاص بـ jsDelivr. -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="menu-sections-style.css"> <!-- ربط بملف ال css -->
+    <script src="menu-sections-script.js"></script> <!-- ربط الملف بملف ال js -->
+</head>
+<body>
+<section class="menu section bd-container" id="menu">
+  <h1 class="section-title">قائمة  مناسف الأرز</h1>  <!-- عنوان رئيسي للقسم -->
+  <div class="menu-contanir">
+  <div class="menu__content">  <!-- عنصر قائمة أول-->
+   <img src="../images/rice-mansaf-imgs/soggy.jpg" alt="" class="menu__img">  <!-- صورة طبق الطعام -->
+   <h3 class="menu__name">مندي</h3> <!-- اسم الطبق -->
+   <span class="menu__preci">280lt</span>  <!-- السعر -->
+   <a href="#" class="btn" onclick="addToCart('مندي', 280); return false;">اطلب الآن</a>  <!-- زر الطلب -->
+  </div>
+      
+  <div class="menu__content">  <!-- عنصر قائمة ثاني-->
+   <img src="../images/rice-mansaf-imgs/meat-kabsa.jpg" alt="" class="menu__img"> 
+   <h3 class="menu__name">كبسة لحم</h3> 
+   <span class="menu__preci">515lt</span> 
+   <a href="#" class="btn" onclick="addToCart('كبسة لحم', 515); return false;">اطلب الآن</a> 
+  </div>
+      
+  <div class="menu__content">  <!-- عنصر قائمة ثالث-->
+   <img src="../images/rice-mansaf-imgs/chicken-kabsa.jpg" alt="" class="menu__img"> 
+   <h3 class="menu__name">كبسة دجاج</h3> 
+   <span class="menu__preci">300lt</span> 
+   <a href="#" class="btn" onclick="addToCart('كبسة دجاج', 300); return false;">اطلب الآن</a> 
+  </div>
+    
+  <div class="menu__content">  <!-- عنصر قائمة رابع-->
+   <img src="../images/rice-mansaf-imgs/freekeh-and-rice-with-meat.jpg" alt="" class="menu__img"> 
+   <h3 class="menu__name">منسف فريكة والأرز باللحم</h3> 
+   <span class="menu__preci">500lt</span> 
+   <a href="#" class="btn" onclick="addToCart('منسف فريكة والأرز باللحم', 500); return false;">اطلب الآن</a> 
+  </div>
+       
+  <div class="menu__content">  <!-- عنصر قائمة خامس-->
+   <img src="../images/rice-mansaf-imgs/freekeh-and-rice-with-chicken.jpg" alt="" class="menu__img"> 
+   <h3 class="menu__name">منسف فريكة والأرز بالدجاج</h3> 
+   <span class="menu__preci">350lt</span> 
+   <a href="#" class="btn" onclick="addToCart('منسف فريكة والأرز بالدجاج', 350); return false;">اطلب الآن</a> 
+  </div>
+     
+  <div class="menu__content">  <!-- عنصر قائمة سادس-->
+   <img src="../images/rice-mansaf-imgs/biryani-rice.jpg" alt="" class="menu__img"> 
+   <h3 class="menu__name">رز برياني</h3> 
+   <span class="menu__preci">75lt</span> 
+   <a href="#" class="btn" onclick="addToCart('رز برياني', 75); return false;">اطلب الآن</a> 
+  </div>
+</section>
+  <!-- رسالة التحديث -->
+<div id="message" class="message" style="display: none;">
+ <span class="message-text">تم الإضافة إلى السلة بنجاح</span>
+ <button class="message-close" onclick="closeMessage()">×</button> <!-- زر إغلاق الرسالة -->
+</div>
+</body>
+</html>

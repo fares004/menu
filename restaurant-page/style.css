@@ -1,0 +1,522 @@
+/* تنسيق صفحة المطعم */
+
+/* الألوان المستخدمة بتنسيق الصفحة */
+:root{
+
+    --back:#fa7d39;
+    --nav:#f5e7c6;
+    --text:#222222;
+    --btn:#faf3e1;
+}
+
+/* تنسيق الصفحة بشكل عام */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    direction: rtl;
+    font-family: "El Messiri", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* تنسيق أقسام الصفحة */
+section{
+padding: 2rem 9%;
+background: var(--nav);
+}
+
+/* section:nth-child(even){
+background: var(--back);
+}
+ */
+/* تنسيق ترويسة الصفحة "الشريط الرئيسي" */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--back);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: #ff6d1f;
+}
+
+header .menu-name{
+    color: var(--text);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+header .menu-name i{
+    color: #222222;
+}
+
+/* header .header-logo{
+    width: 10%;
+} */
+
+header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    color: #222222;
+}
+
+header .navbar a:hover{
+    color: #222222;
+    background: var(--nav);
+}
+
+header .icons i,header .icons a{
+cursor: pointer;
+margin-left: .5rem;
+height: 4.5rem;
+line-height: 4.5rem;
+width: 4.5rem;
+text-align: center;
+font-size: 1.7rem;
+color: var(--back);
+border-radius: 50%;
+background: #222222;
+}
+
+header .icons i:hover,header .icons a:hover{
+    color: #ff6d1f;
+    background: var(--btn);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+/* تنسيق عناوين الأقسام */
+.sub-heading{
+text-align: center;
+color: var(--text);
+font-size: 3rem;
+padding-top: 1rem;
+padding-bottom: 1.5rem;
+}
+
+.heading{
+    text-align: center;
+    color: var(--text);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* تنسيق أزرار السلايدات وقسم التعريف */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #222222;
+    background: var(--btn);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    background: #fb5800;
+    letter-spacing: .1rem;
+}
+
+/* تنسيق نموذج البحث */
+#search-form{
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background:rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active{
+    top: 0;
+}
+
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid #f5e7c6;
+    padding: 1rem 0;
+    color: #f5e7c6;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder{
+    color: #ff6d1f;
+}
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color: #f5e7c6;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover{
+    color: yellow;
+}
+
+#search-form #close{
+position: absolute;
+color: #ff6d1f;
+cursor: pointer;
+top: 2rem;
+right: 3rem;
+font-size: 5rem;
+} 
+
+/* تنسيق الصفحة الرئيسية */
+#home{
+    /* padding: 2rem 4%; */
+    padding-bottom: 8rem;
+} 
+
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 9rem;
+}
+
+.home .home-slider .wrapper{
+    gap: 2rem;
+}  
+
+.home .home-slider .slide .content{
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image{
+    flex: 1 1 43rem;
+}
+
+.home .home-slider .slide .image img{
+    width: 100%;
+    height:50rem;
+    border-radius: 20%;
+    margin-left: 2rem;
+}
+
+.home .home-slider .slide .content span{
+    color: var(--text);
+    font-size: 2.5rem;
+   
+}
+
+.home .home-slider .slide .content h3{
+    color: var(--back);
+    font-size: 6rem;
+    padding: 2rem 0;
+}
+
+.home .home-slider .slide .content p{
+    color: var(--text);
+    font-size: 2.2rem;
+    padding: 3rem 0 3rem 3rem;
+    line-height: 4rem;
+}
+
+/* تنسيق قسم التعريف عن المطعم */
+#about{
+    background: var(--nav);
+    padding-bottom: 3rem;
+}
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 80%;
+    border-radius: 20%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+}
+
+.about .row .content h3{
+color: var(--back);
+font-size: 4rem;
+padding: .5rem 0;
+}
+
+.about .row .content p{
+color: var(--text);
+font-size: 2rem;
+padding: .5rem 0;
+line-height: 2;
+}
+
+.about .row .content .icons-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-top: .5rem;
+}
+
+.about .row .content .icons-container .icons{
+    background: #fa7d39;
+    border-radius: .5rem;
+    border: .1rem solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex: 1 1 17rem;
+    padding: 1.5rem 1rem;
+}
+
+.about .row .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+.about .row .content .icons-container .icons i{
+    font-size: 2.5rem;
+    color:#222222;
+}
+
+/* تنسيق قسم قائمة الطعام */
+#menu{
+    background: var(--nav);
+    padding-bottom: 3rem;
+}
+
+.menu .btn{
+    background: var(--back);
+    transition: .2s;
+}
+
+.menu .btn:hover{
+background: var(--nav);
+letter-spacing: normal;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28rem,1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    background: var(--text);
+    border: 1rem solid #222222;
+    border-radius: .5rem;
+    box-shadow: rgb(0, 0, 0);
+}
+
+.menu .box-container .box .image img{
+    height: 25rem;
+    width: 35rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.menu .box-container .box .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+
+.menu .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--btn);
+}
+
+.menu .box-container .box .content h3{
+    color: var(--btn);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.menu .box-container .box .content .pice{
+    color: var(--btn);
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+
+/* تنسيق قسم آراء الزبائن */
+#review{
+    padding-bottom: 3rem;
+}
+
+.review .slide{
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: #fa7d39;
+    border: .1rem solid #222222;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.review .slide .fa-quote-right{
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    font-size: 3rem;
+    color: var(--back);
+}
+
+.review .slide .user{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3{
+    color: var(--back);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i{
+    font-size: 1.3rem;
+    color: var(--back);
+}
+
+.review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #222222;
+}
+
+textarea{
+width: 100%;
+margin-top: 2rem;
+margin-bottom: 1rem;
+padding: 1rem;
+font-size: 2rem;
+background: #f8f5eb;
+color: #222222;
+}
+
+/* تنسيق تذييل الصفحة */
+#footer{
+    padding-bottom: 3rem;
+    background-color: var(--back);
+}
+
+.footer .box-conatainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-conatainer .box h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #f5e7c6;
+}
+
+.footer .box-conatainer .box a{
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.footer #pit a:hover{
+    color: var(--btn);
+}
+
+.footer .cradit{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--nav);
+    padding: .5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/*  Media Queries  */
+/* @media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+};  */
+/* 
+
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display:inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background-color: #f8f5eb;
+        border-top: .1rem solid #fa7d39;
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background-color: #fa7d39;
+    }
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+    .home .home-slider .slide .content h3{
+        font-size: 5rem;
+    }
+}
+ */

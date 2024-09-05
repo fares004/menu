@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resto</title>
+    <!-- يوجه المتصفح لإنشاء اتصال مسبق بخادم Google Fonts، مما يساعد على تسريع تحميل الخطوط. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- يوجه المتصفح لإنشاء اتصال مسبق بخادم Google Fonts للحصول على ملفات الخطوط،
+      مع تعيين خاصية crossorigin لتمكين التحميل عبر النطاقات المختلفة. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- يرتبط بملف CSS الذي يحتوي على تعريفات خط El Messiri من Google Fonts، مع دعم للأوزان من 400 إلى 700. -->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- ربط مكتبة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> 
+
+    <link rel="stylesheet" href="./style.css"> <!-- ربط بملف ال css -->
+    </head>
+<body>
+   <!-- Start of the header section -->
+<header>
+  <!-- <img class="header-logo" src="../images/resturant-imgs/head-logo.jpg"> -->
+  <a href="#" class="menu-name"><i class="fas-fa-untensils"></i> راسلني وذوق</a>
+  <nav class="navbar">  <!-- يحدد عنصر التنقل مع فئات التصميم  -->
+       <a href="#home">الرئيسية</a>
+       <!-- <a href="#order">كيفية الطلب</a> -->
+       <a href="#about">من نحن </a>
+       <a href="#menu">القائمة</a>
+       <a href="#review">الآراء</a>
+</nav>
+<div class="icons"> <!-- أيقونات الشريط الرئيسي -->
+   <i class="fas fa-bars" id="menu-bars"></i>
+   <i class="fas fa-search" id="search-icon"></i>
+   <a href="#review" class ="fas fa-heart" id="heart-icon"></a>
+   <a href="../shopping-cart/shopping-cart.html" class ="fas fa-shopping-cart"></a>
+</div>
+</header>
+  <!-- End of the header section -->
+
+  <!-- Start of the search form  -->
+<form action="" id="search-form">
+   <input type="search" placeholder="ابحث هنا " id="search-box">
+   <label for="search-box" class="fas fa-search"></label>
+   <i class="fas fa-times" id="close"></i>   <!-- أيقونة البحث -->
+</form>
+ <!-- End of the search form -->
+
+ <!-- Start of the home section -->
+<section class="home" id="home">
+   <div class="swiper-container home-slider">
+   <!-- حاوية السلايدات -->
+   <div class="swiper-wrapper wrapper"> 
+   <div class="swiper-slide  slide"> <!-- حاوية السلايد الاول -->
+    <div class="content"> <!-- حاوية عناصر السلايد -->
+     <span>طبقنا المميز</span> <!-- عنوان السلايد -->
+     <h3> دجاج مشوي</h3> <!-- اسم الوجبة -->
+     <p>قطع دجاج مشوي بعناية مع تتبيلة لذيذة،
+       تُقدم مع نكهات غنية وصوصات مميزة.
+       وجبة مشبعة تُرضي ذوقك في كل مرة.</p>  <!-- نبذة عن الوجبة -->
+     <a href="#" class="btn"> اطلب الآن</a> <!-- زر طلب الوجبة -->
+    </div>
+    <div class="image"> <!-- حاوية صورة الوجبة -->
+    <img src="../images/resturant-imgs/slides/grilled-chicken-slide.jpg" alt="">  <!-- صورة الوجبة -->
+    </div>
+   </div>
+   </div>
+
+   <div class="swiper-pagination"></div>
+   </div>
+</section>
+  <!-- End of the home section -->
+
+  <!-- about section starts -->
+<section class="about" id="about">
+  <h3 class="heading">من نحن ؟ </h3>
+  <div class="row">
+    <div class="image">
+    <img src="../images/resturant-imgs/logo.jpg" alt="">
+    </div>
+    <div class="content">
+    <h3>راسلني و ذوق</h3>
+    <p>
+    نقدم لك تجربة طعام مميزة مع التركيز على الجودة والنكهة.
+    نستخدم مكونات طازجة ومختارة بعناية لتحضير أطباق شهية تناسب جميع الأذواق.
+    نحن هنا لتقديم أفضل خدمة وتجربة طعام تجعل كل وجبة لديك مميزة.
+    </p>
+  <div class="icons-container">
+    <div class="icons">
+     <i class="fas fa-shipping-fast"></i> <span>توصيل سريع</span>
+    </div>
+    <div class="icons">
+     <i class="fas fa-dollar-sign"></i>
+     <span>أسعار مقبولة </span>
+    </div>
+    <div class="icons">
+     <i class="fas fa-headst"></i>
+     <span> خدمة 24 ساعة</span>
+    </div> 
+  </div>
+   </div>
+  </div>
+</section>
+   <!-- End of the about section --> 
+
+   <!-- Start of the menu section -->
+<section class="menu" id="menu">
+   <h3 class="sub-heading"> القائمة </h3>
+   <div class="box-container">
+    <div class="box">
+     <div class="image">
+      <img src="../images/resturant-imgs/menu-imgs/grills.jpg" alt="">
+     </div>
+    <div class="content">
+     <h3> مشاوي </h3>
+     <a href="../menu-sections/grills-section.html" class="btn">تعرف على الأقسام الاخرة من هنا </a>
+    </div>
+    </div>
+    <div class="box">
+     <div class="image">
+      <img src="../images/resturant-imgs/menu-imgs/crispy.jpg" alt="">
+     </div>
+     <div class="content">
+      <h3> كريسبي </h3>
+      <a href="../menu-sections/crispy-section.html" class="btn">تعرف على الأقسام الاخرة من هنا </a>
+     </div>
+    </div>
+    <div class="box">
+     <div class="image">
+      <img src="../images/resturant-imgs/menu-imgs/kabsa-mansaf.jpg" alt="">
+     </div>
+     <div class="content">
+      <h3> مناسف كبسة </h3>
+      <a href="../menu-sections/rice-mansaf-section.html" class="btn">تعرف على الأقسام الاخرة من هنا </a>
+     </div>
+    </div>
+    <div class="box">
+     <div class="image">
+      <img src="../images/resturant-imgs/menu-imgs/potato.jpg" alt="">
+     </div>
+     <div class="content">
+      <h3> بطاطا مقلية </h3>
+      <a href="../menu-sections/potato-section.html" class="btn">تعرف على الأقسام الاخرة من هنا </a>
+     </div> 
+    </div>
+    <div class="box">
+     <div class="image">
+      <img src="../images/resturant-imgs/menu-imgs/burger.jpg" alt="">
+     </div>
+     <div class="content">
+      <h3> همبرغر </h3>
+      <a href="../menu-sections/hamburger-section.html" class="btn">تعرف على الأقسام الاخرة من هنا  </a>
+     </div>
+    </div>
+    <div class="box">
+     <div class="image">
+      <img src="../images/resturant-imgs/menu-imgs/shawarma.jpg" alt="">
+     </div>
+     <div class="content">
+      <h3> شاورما </h3>
+      <a href="../menu-sections/shawarma-section.html" class="btn"> تعرف على الأقسام الاخرة من هنا </a>
+     </div>
+    </div>
+   </div>
+</section>
+   <!-- End of the menu section -->
+
+   <!-- Start of the review section -->
+<section class="review" id="review">
+   <h3 class="sub-heading">آراء زبائننا الكرام</h3>
+   <h1 class="heading"> ماذا يقولون عنا ؟ </h1>
+   <div class="review-slider">
+   <div class="wrapper">
+    <div class="slide">
+     <i class="fas fa-quote-right"></i>
+    <div class="user">
+     <img src="../images/resturant-imgs/customer-imgs/customer1.jpg" alt="">
+    <div class="user-info">
+     <h3>محمد خالد</h3>
+    <div class="stars">  <!-- أيقونات نجوم التقييم -->
+     <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i>
+     <i class="fa fa-star"></i>
+     <i class="fas fa-star-half-alt"></i>
+    </div>
+   </div>
+   </div>
+     <p>طعم لذيذ ، وتوصيل سريع، وخدمة عملاء ممتازة</p>
+   </div>
+    <div class="slide">
+     <i class="fas fa-quote-right"></i>
+    <div class="user">
+     <img src="../images/resturant-imgs/customer-imgs/customer2.jpg" alt="">
+    <div class="user-info">
+     <h3>سعيد محمود</h>
+    <div class="stars">   <!-- أيقونات نجوم التقييم -->
+     <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i>
+     <i class="fa fa-star"></i>
+     <i class="fas fa-star-half-alt"></i>
+    </div>
+    </div>
+    </div>
+     <p> من أفضل المطاعم</p>
+   </div>
+    <div class="slide">
+     <i class="fas fa-quote-right"></i>
+    <div class="user">
+     <img src="../images/resturant-imgs/customer-imgs/customer3.jpg" alt="">
+    <div class="user-info">
+     <h3>أحمد العبدالله</h>
+    <div class="stars">   <!-- أيقونات نجوم التقييم -->
+     <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i> <i class="fa fa-star"></i>
+     <i class="fas fa-star-half-alt"></i>
+    </div>
+    </div>
+    </div>
+     <p>الطعم رهيييب </p>
+   </div>
+  <textarea id="reviewText" placeholder="اكتب رأيك هنا..."  rows="2" ></textarea>
+    <button id="submitReview" class="btn">إرسال</button>
+   </div>
+   </div>
+</section>
+
+ <!-- End of the review section -->
+
+ <!-- Start of the footer section -->
+<section class="footer" id="footer">
+   <div class="box-conatainer">
+    <div class="box">
+     <h3> العنوان</h3>
+     <a> سوريا - الباب</a>
+    </div>
+    <div class="box" id="pit">
+     <h3> روابط سريعة</h3>
+     <a href="#home"> الرئيسية</a>
+     <a href="#dishes"> الأطباق</a>
+     <a href="#about">  من نحن</a> 
+     <a href="#menu"> القائمة</a>
+     <a href="#review">الآراء </a>
+    </div>
+    <div class="box">
+     <h3> معلومات الاتصال</h3>
+     <a> +90 675 876 56 89</a>
+     <a>  +90 231 654 76 20</a>
+     <a> راسلني وذوق@gmail.com</a>
+    </div>
+    <div class="box">
+     <h3> تابعنا على</h3>
+     <a >فيسبوك </a>
+     <a> تويتر</a>
+     <a> انستقرام</a>
+    </div>
+   </div>
+   <div class="cradit">حقوق الطبع والنشر @2024 </div>
+</section>
+  <!-- End of the footer section -->>
+
+  <!-- يرتبط بملف CSS لمكتبة Swiper المضيف على CDN الخاص بـ unpkg، والذي يحتوي أيضًا على الأنماط الخاصة بـ Swiper. -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- End of Code for moving points between slides -->
+
+   <!-- ربط الملف بملف js -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنواع الشاورما</title>
+    <!-- يرتبط بملف CSS الذي يحتوي على تعريفات خط El Messiri من Google Fonts
+     ، ويشمل الأوزان من 400 إلى 700.
+    يستخدم لتطبيق هذا الخط على النصوص في الصفحة. -->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- يرتبط بملف CSS لمكتبة Boxicons، وهي مجموعة من أيقونات الخطوط 
+    التي يمكن استخدامها في الصفحة. يتم استضافتها على CDN الخاص بـ jsDelivr. -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="menu-sections-style.css"> <!-- ربط بملف ال css -->
+    <script src="menu-sections-script.js"></script> <!-- ربط الملف بملف ال js -->
+</head>
+<body>
+<section class="menu section bd-container" id="menu">
+   <h1 class="section-title">قائمة الشاورما</h1> <!-- عنوان رئيسي للقسم -->
+   <div class="menu-contanir"> 
+   <div class="menu__content">  <!-- عنصر قائمة أول -->
+    <img src="../images/shawarma-imgs/extra-shawarma-kilo.jpg" alt="" class="menu__img">  <!-- صورة طبق الطعام -->
+    <h3 class="menu__name">شاورما فرط  كيلو</h3> <!-- اسم الطبق -->
+    <span class="menu__preci">350lt</span> <!-- السعر -->
+    <a href="#" class="btn" onclick="addToCart('شاورما فرط  كيلو', 350); return false;">اطلب الآن</a>
+    </div>
+
+    <div class="menu__content"> <!-- عنصر قائمة ثاني --> 
+      <img src="../images/shawarma-imgs/extra-shawarma-half-a-kilo.jpg" alt="" class="menu__img">
+      <h3 class="menu__name">شاورما فرط نصف كيلو</h3>
+      <span class="menu__preci">180lt</span>
+      <a href="#" class="btn" onclick="addToCart('شاورما فرط نصف كيلو', 180); return false;">اطلب الآن</a>
+    </div>
+
+    <div class="menu__content"> <!-- عنصر قائمة ثالث -->  
+      <img src="../images/shawarma-imgs/arabic-shawarma.jpg" alt="" class="menu__img">
+      <h3 class="menu__name">شاورما عربية</h3>
+      <span class="menu__preci">240lt</span>
+      <a href="#" class="btn" onclick="addToCart('شاورما عربية', 240); return false;">اطلب الآن</a>
+    </div>
+
+    <div class="menu__content">  <!-- عنصر قائمة رابع --> 
+      <img src="../images/shawarma-imgs/regular-shawarma-sandwich.jpg" alt="" class="menu__img">
+      <h3 class="menu__name">سندوتش شاورما عادية</h3>
+      <span class="menu__preci">40lt</span>
+      <a href="#" class="btn" onclick="addToCart('سندويش شاورما عادي', 4); return false;">اطلب الآن</a>
+    </div>
+
+    <div class="menu__content">  <!-- عنصر قائمة خامس --> 
+      <img src="../images/shawarma-imgs/double-shawarma-sandwich.jpg" alt="" class="menu__img">
+      <h3 class="menu__name">سندوتش شاورما دبل</h3>
+      <span class="menu__preci">50lt</span>
+      <a href="#" class="btn" onclick="addToCart('سندوتش شاورما دبل', 50); return false;">اطلب الآن</a>
+    </div>
+
+    <div class="menu__content">  <!-- عنصر قائمة سادس --> 
+      <img src="../images/shawarma-imgs/italian-shawarma.jpg" alt="" class="menu__img">
+      <h3 class="menu__name">شاورما إيطالي</h3>
+      <span class="menu__preci">130lt</span>
+      <a href="#" class="btn" onclick="addToCart('شاورما إيطالي', 130); return false;">اطلب الآن</a>
+    </div>
+    </div>
+</section>
+
+     <!-- رسالة التحديث -->
+<div id="message" class="message" style="display: none;">
+   <span class="message-text">تم الإضافة إلى السلة بنجاح</span>
+   <button class="message-close" onclick="closeMessage()">×</button>  <!-- زر إغلاق الرسالة -->
+</div>
+</body>
+</html>
+    
+
+
+
+               
+                       
+
+

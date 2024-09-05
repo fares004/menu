@@ -1,0 +1,206 @@
+/* تنسيق العربة */
+
+/* تنسيق الصفحة بشكل عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    direction: rtl;
+    font-family: "El Messiri", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5e7c6;
+}
+
+/* تنسيق القسم الذييحتوي عناصر الصفحة */ 
+#cart {
+    width: 100%;
+    max-width: 140rem;
+    padding: 4em;
+    margin: 6rem;
+    background: white;
+    border-radius: 5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق عنوان القسم الخاص بعربة التسوق */
+h1 {
+    text-align: center;
+    margin-bottom:1rem;
+    color: #222222;
+}
+
+/* حاوية التي ستعرض عناصر العربة */
+#cart-items {
+    margin-bottom: 3rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 0.1rem solid #ddd;
+    padding-bottom: 3rem;
+}
+
+/* تنسيق صور الوجبات */
+.menu__img {
+    width: 9rem; 
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+/* تنسيق عناصر تذييل الصفحة */
+#cart-footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* تنسيق السعر الكلي والعدد الكلي للوجبات */
+#total-price, #total-items {
+    margin-bottom: 1rem;
+    color: #222222;
+    font-size: 1.2rem;
+}
+
+/* تنسيق زر الطلب عبر واتساب وزر حذف جميع الوجبات */
+button {
+    background-color: #f5e7c6;
+    color: #222222;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cartfooter-btns button:hover {
+    background-color: #fa7d39;
+    color: #faf3e1;
+}
+.cartfooter-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* تنسيق العناصر التي ستظهر عندما تكون العربة فارغة */
+#empty-cart-message {
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+#empty-cart-message p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* تنسيق رابط تصفح الوجبات */
+#empty-cart-message .btn{
+    color: #fa7d39;
+    font-size: 2rem;
+}
+
+#empty-cart-message .btn:hover{
+    font-size: 2.5rem;
+    transition: 0.2s;
+}
+
+/* تنسيق أيقونة العربة */
+.fa-shopping-cart{
+    color: #fa7d39;
+    font-size: 3rem;
+    margin-bottom: 1.8rem;
+}
+
+/* تنسيق الرسالة التي تظهر عند طلب الوجبة */
+.message {
+    background-color: #222222 ;
+    font-size: 20px;
+    color: #fa7d39 ;
+    border: 1px solid #f5e7c6;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+    
+.message-text {
+    flex-grow: 1;
+}
+    
+.message-close {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: -10px;
+    margin-right: 10px;
+    color: #fa7d39;
+}
+
+/* تنسيق العناصر التي تحتوي تفاصيل الوجبة */
+.cart-item div {
+    flex: 1;
+}
+
+.cart-item h4 {
+    font-size: 1.2rem;
+    color: #fa7d39 ;
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    color: var(--text);
+}
+
+/* تنسيق عدد مرات طلب الوجبة وأزرار التحكم بالكمية وزر الحذف */
+
+.info-and-quantity-and-removeitem{
+    display: flex;
+    gap: 42rem;
+}
+
+.cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cart-item button {
+    background-color: #fa7d39 ;
+    border-radius: 0.2rem;
+    color: #f5e7c6;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cart-item button:hover {
+    background-color: #f5e7c6;
+    color: #fa7d39 ;
+}
+
+.cart-item .quantity-controls button {
+    margin: 0 0.5rem;
+}
+
+

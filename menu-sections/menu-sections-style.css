@@ -1,0 +1,134 @@
+/*****   تنسيق صفحات أقسام القائمة    *****/
+
+/* الألوان المستخدمة */
+:root{
+    --back:#fa7d39;
+    --nav:#f5e7c6;
+    --text:#222222;
+    --btn:#faf3e1;
+}
+
+/* تنسيق الصفحة بشكل عام */ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    direction: rtl;
+    font-family: "El Messiri", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* تنسيق الأقسام التي تحتوي الوجبات ومعلوماتها */
+section{
+padding: 2rem 9%;
+background: var(--nav);
+}
+
+/* تنسيق عنوان القسم */
+#menu h1{
+    color: var(--text);
+    font-size: 4rem;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+
+/*تنسيق حاوية  */ 
+.bd-container .menu-contanir{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28rem,1fr));
+    gap: 1.5rem;
+}
+
+/* .... تنسيق المحتوى .... */
+.menu-contanir .menu__content{
+    padding: 2.5rem;
+    background: #faf3e1;
+    border-radius: .5rem;
+    border: .1rem solid var(--text);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*  تنسيق  عنوان  الوجبة*/
+.menu-contanir .menu__content h3{
+    color: var(--text);
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+
+/* تنسيق السعر */
+.menu-contanir .menu__content span{
+    color: #222222;
+    font-weight: bolder;
+    margin-right: 1rem;
+    padding: 0 1rem;
+    font-size: 2.5rem;
+}
+
+/* تنسيق صورة الوجبة */
+.menu-contanir .menu__content img{
+    height: 25rem;
+    width: 30rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+/* تنسيق الأزرار */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #222222;
+    background: var(--back);
+    transition: .2s;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    letter-spacing: .1rem;
+}
+
+/* تنسيق الرسالة التي تظهر عند طلب الوجبة */
+.message {
+    background-color: #222222 ;
+    font-size: 20px;
+    color: #fa7d39 ;
+    border: 1px solid #f5e7c6;
+    padding: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+    
+.message-text {
+    flex-grow: 1;
+}
+    
+.message-close {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: -10px;
+    margin-right: 10px;
+    color: #fa7d39;
+}

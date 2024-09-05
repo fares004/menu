@@ -1,0 +1,66 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>سلة المشتريات</title>  
+  <!-- يرتبط بملف CSS الذي يحتوي على تعريفات خط El Messiri من Google Fonts
+  ، ويشمل الأوزان من 400 إلى 700.
+  يستخدم لتطبيق هذا الخط على النصوص في الصفحة. -->
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&disp  <link rel="stylesheet" href="cart-style.css">
+  
+  <!-- ربط مكتبة Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> 
+  <link rel="stylesheet" href="cart-style.css"> <!-- ربط الملف بملف ال css -->
+  <script src="cart.js" defer></script> <!-- ربط الملف بملف ال js -->
+</head>
+
+<body>
+<section id="cart">
+    <!-- عنوان القسم الخاص بعربة التسوق -->
+   <h1>عربة التسوق</h1>
+   
+    <!-- عنصر لعرض عناصر العربة -->
+   <div id="cart-items"></div>
+        
+    <!-- عنصر لتذييل عربة التسوق يعرض السعر الإجمالي وعدد العناصر، ويحتوي على أزرار -->
+   <div id="cart-footer">
+        
+    <!-- عرض السعر الإجمالي للعربة -->
+   <p id="total-price"></p>
+            
+    <!-- عرض عدد العناصر الكلي في العربة -->
+   <p id="total-items"></p>
+    
+   <div class="cartfooter-btns">
+    <!-- زر لحذف جميع العناصر من العربة -->
+    <button id="clear-cart-btn" onclick="clearCart()">حذف جميع الوجبات</button>
+    <!-- زر للطلب عبر واتساب -->
+    <button id="checkout-btn" onclick="checkout()">الطلب عبر واتساب</button>
+    </div>
+   </div>
+        
+    <!-- رسالة تظهر عندما تكون العربة فارغة -->
+    <div id="empty-cart-message" style="display: none;">
+    
+    <!-- أيقونة أو صورة تمثل العربة -->
+    <a href="" class="fas fa-shopping-cart"></a>
+    
+    <!-- رسالة نصية تقول إنه لا يوجد طلبات -->
+    <p>لم تقم بطلب وجبات حتى الآن</p>
+    <!-- رابط للتصفح إلى صفحة المنيو في موقع المطعم -->
+    <a href="../restaurant-page/index.html#menu" class="btn">تصفح الوجبات</a>
+    </div>
+    
+    <!-- رسالة تظهر عند محاولة طلب كمية أقل من الكمية الأدنى المطلوبة -->
+    <div id="min-quantity-message" class="message" style="display: none;">
+    
+    <!-- رسالة نصية توضح الكمية الأدنى -->
+    <p>الكمية الأدنى التي يمكن طلبها هي 1</p>
+    
+    <!-- زر لإغلاق الرسالة -->
+    <button class="message-close" onclick="closeMessage()">×</button>
+    </div>
+</section>
+</body>
+</html>
