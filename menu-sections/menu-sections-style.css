@@ -1,13 +1,5 @@
 /*****   تنسيق صفحات أقسام القائمة    *****/
 
-/* الألوان المستخدمة */
-:root{
-    --back:#fa7d39;
-    --nav:#f5e7c6;
-    --text:#222222;
-    --btn:#faf3e1;
-}
-
 /* تنسيق الصفحة بشكل عام */ 
 *{
     margin: 0;
@@ -21,6 +13,14 @@
     direction: rtl;
     font-family: "El Messiri", sans-serif;
 }
+/* الألوان المستخدمة */
+:root{
+    --back:#fa7d39;
+    --nav:#f5e7c6;
+    --text:#222222;
+    --btn:#faf3e1;
+}
+
 
 html{
     font-size: 62.5%;

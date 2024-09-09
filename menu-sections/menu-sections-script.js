@@ -4,17 +4,21 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // إضافة عنصر إلى السلة
-function addToCart(itemName, itemPrice) {
+function addToCart(itemName, itemPrice, itemLink) {
     const existingItem = cart.find(item => item.name === itemName);
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
-        cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+        cart.push({ name: itemName, price: itemPrice, link: itemLink, quantity: 1 });
     }
     
-    localStorage.setItem('cart', JSON.stringify(cart));
-    showMessage();
+    localStorage.setItem('cart', JSON.stringify(cart)); // حفظ السلة مع رابط الصورة
+    showMessage(itemName);
 }
+
+
+
+
 
 // عرض الرسالة
 function showMessage() {

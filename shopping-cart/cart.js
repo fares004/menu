@@ -27,32 +27,39 @@ function updateCartDisplay() {
         checkoutButton.style.display = 'block'; 
 
         // تحديث عرض العناصر في العربة
-        cartItemsElement.innerHTML = cart.map((item, index) => `
-            <div class="cart-item">
-                <!-- عرض صورة العنصر بناءً على اسم العنصر -->
-                <img src="./images/${item.name}.jpg" alt="${item.name}" class="menu__img">
-                <div class="info-and-quantity-and-removeitem">
-                    <div>
-                        <!-- عرض اسم العنصر -->
-                        <h4>${item.name}</h4>
-                        <!-- عرض سعر العنصر -->
-                        <p>سعر: ${item.price}lt</p>
-                        <!-- عرض السعر الإجمالي للعنصر -->
-                        <p>سعر الإجمالي: ${item.price * item.quantity}lt</p>
-                    </div>
-                    <div class="quantit-and-removeitem">
-                        <div class="quantity-controls">
-                            <!-- أزرار لتغيير كمية العنصر -->
-                            <button onclick="changeQuantity(${index}, 1)">+</button>
-                            <span>${item.quantity}</span>
-                            <button onclick="changeQuantity(${index}, -1)">-</button>
+        cartItemsElement.innerHTML = cart.map(( item, index) => {
+            // تحقق من وجود الخصائص المطلوبة
+            if (!item.name || !item.price ||!item.link || item.quantity === undefined) {
+                console.error(`Item at index ${index} is missing required properties`, item);
+                return ''; // إرجاع عنصر فارغ في حال وجود خطأ في البيانات
+            }
+            return `
+                <div class="cart-item">
+                    <!-- عرض صورة العنصر بناءً على رابط العنصر -->
+                   <img src="${item.link}" alt="${item.name}" class="menu__img" >
+                    <div class="info-and-quantity-and-removeitem">
+                        <div>
+                            <!-- عرض اسم العنصر -->
+                            <h4>${item.name}</h4>
+                            <!-- عرض سعر العنصر -->
+                            <p>سعر: ${item.price}lt</p>
+                            <!-- عرض السعر الإجمالي للعنصر -->
+                            <p>سعر الإجمالي: ${item.price * item.quantity}lt</p>
                         </div>
-                        <!-- زر لحذف العنصر -->
-                        <button onclick="removeItem(${index})">حذف</button>
+                        <div class="quantit-and-removeitem">
+                            <div class="quantity-controls">
+                                <!-- أزرار لتغيير كمية العنصر -->
+                                <button onclick="changeQuantity(${index}, 1)">+</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="changeQuantity(${index}, -1)">-</button>
+                            </div>
+                            <!-- زر لحذف العنصر -->
+                            <button onclick="removeItem(${index})">حذف</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `).join(''); // دمج جميع العناصر كـ HTML
+            `;
+        }).join(''); // دمج جميع العناصر كـ HTML
 
         // حساب السعر الإجمالي للعربة
         const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -93,7 +100,8 @@ function clearCart() {
 
 // تقديم الطلب عبر واتساب
 function checkout() {
-    const message = cart.map(item => `${item.name}: ${item.quantity} x $${item.price}`).join('\n') + `\n\n-------\n\nالمبلغ الإجمالي: $${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)}\nعدد الوجبات المختلفة: ${cart.length}`;
+    const message = cart.map(item => `${item.name}: ${item.quantity} x ${item.price}lt`).join('\n') + 
+    `\n\n-------\n\nالمبلغ الإجمالي: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)}lt\nعدد الوجبات المختلفة: ${cart.length}`;
     const phoneNumber = '12232131208'; // الرقم بتنسيق دولي بدون رموز
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

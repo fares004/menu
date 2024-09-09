@@ -5,6 +5,7 @@
         "name":"crispy-chicken-with-rice.jpg" ,
         "price": 150,
         "link":"../images/crispy-imgs/crispy-chicken-with-rice.jpg"
+       
         
     },
     {
@@ -12,7 +13,8 @@
         "category": "crispy-imgs",
         "name": "crispy-meal.jpg",
         "price": 130,
-        "link":"../images/crispy-imgs/crispy-meal.jpg"
+        "link":"../images/crispy-imgs/crispy-chicken-with-rice.jpg"
+      
        
     },
     {
@@ -21,6 +23,7 @@
         "name": "crispy-roll-meal.jpg",
         "price": 100,
         "link":"../images/crispy-imgs/crispy-roll-meal.jpg"
+ 
         
     },
     {
@@ -29,6 +32,7 @@
         "name": "double-crispy-sandwich.jpg",
         "price": 60,
         "link":"../images/crispy-imgs/double-crispy-sandwich.jpg"
+      
     },
     {
         "id":"5",
@@ -36,6 +40,7 @@
         "name": "half-a-crispy-meal.jpg",
         "price": 65,
         "link":"../images/crispy-imgs/half-a-crispy-meal.jpg"
+     
     },
     {
         "id":"6",
@@ -43,5 +48,6 @@
         "name": "regular-crispy-sandwich.jpg",
         "price": 50,
         "link":"../images/crispy-imgs/regular-crispy-sandwich.jpg"
+      
     }
 ]
